@@ -40,17 +40,17 @@ export default function Header() {
         <button
           data-testid="brand-logo"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center gap-3 group"
+          className="flex items-center gap-3 group shrink-0"
         >
           <span className="w-9 h-9 grid place-items-center border border-[#C5A059] text-[#C5A059] font-display text-xl tracking-tight group-hover:bg-[#C5A059] group-hover:text-white transition-colors">
             S
           </span>
-          <div className="text-left leading-tight whitespace-nowrap hidden sm:block">
-            <div className="font-display text-lg tracking-wide text-[#2D2D2D]">
-              {SITE.brand}
+          <div className="text-left leading-tight whitespace-nowrap hidden md:block">
+            <div className="font-display text-base xl:text-lg tracking-wide text-[#2D2D2D]">
+              Signature Style
             </div>
             <div className="text-[9px] tracking-[0.25em] uppercase text-[#C5A059]">
-              Italian Ivory · Gold
+              Interiors · Ivory & Gold
             </div>
           </div>
         </button>
