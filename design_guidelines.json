@@ -1,0 +1,80 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 5 (Jewel & Luxury) - Light Editorial Variant",
+  "color_palette": {
+    "background_base": "#FAF6EC",
+    "background_secondary": "#FFFFFF",
+    "primary_accent": "#C5A059",
+    "primary_accent_hover": "#B38F48",
+    "text_primary": "#2D2D2D",
+    "text_secondary": "#6B6B6B",
+    "border_color": "#E5DFD3"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Outfit",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-[#2D2D2D]",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight text-[#2D2D2D]",
+      "h3": "text-2xl sm:text-3xl font-medium text-[#2D2D2D]",
+      "body": "text-base leading-relaxed text-[#6B6B6B]",
+      "overline": "text-xs tracking-[0.2em] uppercase text-[#C5A059] font-medium"
+    }
+  },
+  "layout_and_spacing": {
+    "section_padding": "py-20 md:py-32",
+    "container_spacing": "px-6 md:px-12 lg:px-24 mx-auto max-w-7xl",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-8",
+    "grid_standard": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+  },
+  "components": {
+    "header": {
+      "style": "Crystal Glassmorphism",
+      "classes": "fixed top-0 w-full z-50 bg-[#FAF6EC]/80 backdrop-blur-xl border-b border-[#E5DFD3]/50"
+    },
+    "buttons": {
+      "primary": "bg-[#C5A059] text-white hover:bg-[#B38F48] transition-colors duration-300 rounded-none px-8 py-4 font-medium tracking-wide",
+      "secondary": "border border-[#C5A059] text-[#C5A059] hover:bg-[#C5A059] hover:text-white transition-colors duration-300 rounded-none px-8 py-4 font-medium tracking-wide"
+    },
+    "cards": {
+      "style": "Flat Solid with sharp edges (Neumorphism twist)",
+      "classes": "bg-white border border-[#E5DFD3] p-8 hover:-translate-y-2 transition-transform duration-300 shadow-sm hover:shadow-xl"
+    }
+  },
+  "sections_instructions": {
+    "hero": "Full bleed hero image with a soft gradient overlay (bg-gradient-to-r from-black/50 via-black/30 to-transparent) to ensure text readability. White text for high contrast. Left-aligned content. `data-testid='hero-section'`",
+    "about": "Asymmetrical layout. Image on left spanning 5 cols, content on right spanning 7 cols. Use the abstract texture background. `data-testid='about-section'`",
+    "services": "Grid of 8 minimalist cards. Include lucide-react or phosphore icons (thin stroke). `data-testid='services-grid'`",
+    "portfolio": "Masonry or tight grid. Category filters (Budget, Mid-Range, Premium) above the grid. Image hover effect: subtle zoom within container. `data-testid='portfolio-gallery'`",
+    "why_choose_us": "Alternating bento grid layout with 1px gold borders. Use deep charcoal (#2D2D2D) surface for one of the highlight blocks for contrast. `data-testid='why-choose-us'`",
+    "pricing": "3 tiers. Standard in the middle slightly elevated. Background ivory, middle card white with gold border. `data-testid='pricing-section'`",
+    "testimonials": "Carousel or Grid using Embla Carousel or basic flex overflow. Elegant quote styling. `data-testid='testimonials-section'`",
+    "contact": "Clean Shadcn form customized with square inputs, ivory background, gold focus rings. `data-testid='contact-form'`",
+    "floating_whatsapp": "Fixed bottom-right button, green branding (#25D366) or minimal gold depending on contrast. `data-testid='whatsapp-float'`",
+    "footer": "Dark charcoal background (#2D2D2D) with ivory and gold text for a premium end. `data-testid='footer'`"
+  },
+  "media": {
+    "hero_image": "https://static.prod-images.emergentagent.com/jobs/94e983b5-8972-4845-8e05-3d289e91afc7/images/00340e670245c19f856df3e334d695a3e3110f37621e27c9fcf6d9fa86f07c8a.png",
+    "abstract_background": "https://static.prod-images.emergentagent.com/jobs/94e983b5-8972-4845-8e05-3d289e91afc7/images/de5e319705031b08559d33264b69ca4f613d77155e2056a705a6d5a93b65a06c.png",
+    "portfolio_kitchen": "https://static.prod-images.emergentagent.com/jobs/94e983b5-8972-4845-8e05-3d289e91afc7/images/9c73c1fe2d41c5b650968aedf01153cee9da35d24603e5ce79e9a8a875b9fe39.png",
+    "portfolio_living_1": "https://images.unsplash.com/photo-1758448755778-90ebf4d0f1e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBpdm9yeSUyMGxpdmluZyUyMHJvb20lMjBpbnRlcmlvcnxlbnwwfHx8fDE3Nzc5NzE4Nzl8MA&ixlib=rb-4.1.0&q=85",
+    "portfolio_living_2": "https://images.unsplash.com/photo-1593987314040-8e0ac84ae724?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBpdm9yeSUyMGxpdmluZyUyMHJvb20lMjBpbnRlcmlvcnxlbnwwfHx8fDE3Nzc5NzE4Nzl8MA&ixlib=rb-4.1.0&q=85",
+    "portfolio_bedroom_1": "https://images.unsplash.com/photo-1760072513376-67a46aab0fd1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHw0fHxlbGVnYW50JTIwbW9kZXJuJTIwYmVkcm9vbSUyMGludGVyaW9yfGVufDB8fHx8MTc3Nzk3MTg3OXww&ixlib=rb-4.1.0&q=85",
+    "portfolio_bedroom_2": "https://images.unsplash.com/photo-1774578342040-e43e8016428c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwyfHxlbGVnYW50JTIwbW9kZXJuJTIwYmVkcm9vbSUyMGludGVyaW9yfGVufDB8fHx8MTc3Nzk3MTg3OXww&ixlib=rb-4.1.0&q=85",
+    "portfolio_office_1": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwwfHx8fDE3Nzc5NzE4Nzl8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "testing_attributes": {
+    "required": true,
+    "format": "data-testid",
+    "convention": "kebab-case, role-based"
+  },
+  "animation_guidelines": {
+    "hover_states": "Smooth transitions on all interactive elements (duration-300).",
+    "entrance": "Use framer-motion for elegant fade-up animations on scroll (initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}).",
+    "scroll": "Smooth scrolling (Lenis highly recommended)."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "Thin stroke (1.5), elegant, consistent size."
+  }
+}
