@@ -1,0 +1,92 @@
+import { useState } from "react";
+import useReveal from "../hooks/useReveal";
+
+const items = [
+  { cat: "Premium", title: "Ivory Living Suite", img: "https://images.unsplash.com/photo-1758448755778-90ebf4d0f1e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBpdm9yeSUyMGxpdmluZyUyMHJvb20lMjBpbnRlcmlvcnxlbnwwfHx8fDE3Nzc5NzE4Nzl8MA&ixlib=rb-4.1.0&q=85" },
+  { cat: "Mid-Range", title: "Champagne Lounge", img: "https://images.unsplash.com/photo-1593987314040-8e0ac84ae724?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBpdm9yeSUyMGxpdmluZyUyMHJvb20lMjBpbnRlcmlvcnxlbnwwfHx8fDE3Nzc5NzE4Nzl8MA&ixlib=rb-4.1.0&q=85" },
+  { cat: "Premium", title: "Boudoir Retreat", img: "https://images.unsplash.com/photo-1760072513376-67a46aab0fd1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHw0fHxlbGVnYW50JTIwbW9kZXJuJTIwYmVkcm9vbSUyMGludGVyaW9yfGVufDB8fHx8MTc3Nzk3MTg3OXww&ixlib=rb-4.1.0&q=85" },
+  { cat: "Budget", title: "Soft Modern Bedroom", img: "https://images.unsplash.com/photo-1774578342040-e43e8016428c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwyfHxlbGVnYW50JTIwbW9kZXJuJTIwYmVkcm9vbSUyMGludGVyaW9yfGVufDB8fHx8MTc3Nzk3MTg3OXww&ixlib=rb-4.1.0&q=85" },
+  { cat: "Mid-Range", title: "Ivory Modular Kitchen", img: "https://static.prod-images.emergentagent.com/jobs/94e983b5-8972-4845-8e05-3d289e91afc7/images/9c73c1fe2d41c5b650968aedf01153cee9da35d24603e5ce79e9a8a875b9fe39.png" },
+  { cat: "Premium", title: "Executive Workspace", img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwwfHx8fDE3Nzc5NzE4Nzl8MA&ixlib=rb-4.1.0&q=85" },
+];
+
+const filters = ["All", "Budget", "Mid-Range", "Premium"];
+
+export default function Portfolio() {
+  const ref = useReveal();
+  const [active, setActive] = useState("All");
+  const visible = active === "All" ? items : items.filter((i) => i.cat === active);
+
+  return (
+    <section
+      data-testid="portfolio-section"
+      id="portfolio"
+      ref={ref}
+      className="reveal relative py-24 md:py-32 bg-[#FAF6EC]"
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
+          <div>
+            <span className="text-[11px] tracking-[0.3em] uppercase text-[#C5A059] font-medium">
+              — Our Projects
+            </span>
+            <h2
+              data-testid="portfolio-title"
+              className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-[#2D2D2D] mt-5 leading-[1.05]"
+            >
+              Empty spaces, turned into
+              <br />
+              <span className="italic text-[#C5A059]">beautiful experiences.</span>
+            </h2>
+          </div>
+          <div className="flex flex-wrap gap-2" data-testid="portfolio-filters">
+            {filters.map((f) => (
+              <button
+                key={f}
+                data-testid={`portfolio-filter-${f.toLowerCase()}`}
+                onClick={() => setActive(f)}
+                className={`px-5 py-2.5 text-[11px] tracking-[0.22em] uppercase border transition-colors ${
+                  active === f
+                    ? "bg-[#2D2D2D] text-[#FAF6EC] border-[#2D2D2D]"
+                    : "bg-transparent text-[#2D2D2D] border-[#E5DFD3] hover:border-[#C5A059] hover:text-[#C5A059]"
+                }`}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div data-testid="portfolio-gallery" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {visible.map((p, i) => (
+            <figure
+              key={`${p.title}-${i}`}
+              data-testid={`portfolio-item-${i}`}
+              className="group relative overflow-hidden bg-white border border-[#E5DFD3]"
+            >
+              <div className="overflow-hidden h-72 md:h-80">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption className="p-5 flex items-center justify-between border-t border-[#E5DFD3]">
+                <div>
+                  <div className="font-display text-xl text-[#2D2D2D]">{p.title}</div>
+                  <div className="text-[10px] tracking-[0.3em] uppercase text-[#C5A059] mt-1">
+                    {p.cat}
+                  </div>
+                </div>
+                <span className="text-[10px] tracking-[0.3em] uppercase text-[#6B6B6B]">
+                  0{i + 1}
+                </span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
