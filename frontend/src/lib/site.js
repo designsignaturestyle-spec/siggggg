@@ -5,9 +5,10 @@ export const SITE = {
   whatsapp: "918748055124", // E.164-ish for wa.me (India country code)
   whatsappMessage:
     "Hello! I'm interested in your interior design services. I'd like to know more about a free consultation.",
+  email: "designsignaturestyle@gmail.com",
   location: "Bangalore, Karnataka",
   socials: {
-    instagram: "#",
+    instagram: "https://www.instagram.com/signaturestyleinteriors01/",
     facebook: "#",
     whatsapp: "https://wa.me/918748055124",
   },

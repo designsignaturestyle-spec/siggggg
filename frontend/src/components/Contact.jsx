@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Phone, MessageCircle, MapPin, Send } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Send, Mail } from "lucide-react";
 import { toast } from "sonner";
 import useReveal from "../hooks/useReveal";
 import { SITE, waLink } from "../lib/site";
@@ -115,6 +115,22 @@ export default function Contact() {
                   <div className="text-[10px] tracking-[0.3em] uppercase text-[#6B6B6B]">WhatsApp</div>
                   <div className="font-display text-2xl text-[#2D2D2D] group-hover:text-[#C5A059] transition-colors">
                     {SITE.phone}
+                  </div>
+                </div>
+              </a>
+
+              <a
+                data-testid="contact-email"
+                href={`mailto:${SITE.email}`}
+                className="flex items-center gap-4 group"
+              >
+                <span className="w-12 h-12 grid place-items-center border border-[#C5A059] text-[#C5A059] group-hover:bg-[#C5A059] group-hover:text-white transition-colors">
+                  <Mail size={18} strokeWidth={1.5} />
+                </span>
+                <div>
+                  <div className="text-[10px] tracking-[0.3em] uppercase text-[#6B6B6B]">Email</div>
+                  <div className="font-display text-xl md:text-2xl text-[#2D2D2D] group-hover:text-[#C5A059] transition-colors break-all">
+                    {SITE.email}
                   </div>
                 </div>
               </a>

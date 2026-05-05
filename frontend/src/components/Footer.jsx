@@ -37,6 +37,11 @@ export default function Footer() {
                   WhatsApp · {SITE.phone}
                 </a>
               </li>
+              <li>
+                <a className="hover:text-[#D9BE85] break-all" href={`mailto:${SITE.email}`}>
+                  {SITE.email}
+                </a>
+              </li>
             </ul>
           </div>
 
