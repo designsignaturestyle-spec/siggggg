@@ -1,4 +1,4 @@
-import { Instagram, Facebook, MessageCircle, ArrowUp } from "lucide-react";
+import { Instagram, MessageCircle, ArrowUp } from "lucide-react";
 import { SITE, waLink } from "../lib/site";
 
 export default function Footer() {

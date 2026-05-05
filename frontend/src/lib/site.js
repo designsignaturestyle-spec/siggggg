@@ -9,7 +9,6 @@ export const SITE = {
   location: "Bangalore, Karnataka",
   socials: {
     instagram: "https://www.instagram.com/signaturestyleinteriors01/",
-    facebook: "#",
     whatsapp: "https://wa.me/918748055124",
   },
 };
