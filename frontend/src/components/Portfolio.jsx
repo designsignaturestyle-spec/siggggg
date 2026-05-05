@@ -2,12 +2,12 @@ import { useState } from "react";
 import useReveal from "../hooks/useReveal";
 
 const items = [
-  { cat: "Premium", title: "Halo Lounge", img: "https://customer-assets.emergentagent.com/job_design-spaces-luxury/artifacts/h5j2dxr0_WhatsApp%20Image%202026-05-05%20at%204.36.52%20PM.jpeg" },
-  { cat: "Premium", title: "Diamond Study Wall", img: "https://customer-assets.emergentagent.com/job_design-spaces-luxury/artifacts/5bep1k0f_WhatsApp%20Image%202026-05-05%20at%204.37.40%20PM.jpeg" },
-  { cat: "Mid-Range", title: "Triangular Accent Bedroom", img: "https://customer-assets.emergentagent.com/job_design-spaces-luxury/artifacts/83q0w404_WhatsApp%20Image%202026-05-05%20at%204.43.59%20PM.jpeg" },
-  { cat: "Premium", title: "Ivory Living Suite", img: "https://images.unsplash.com/photo-1758448755778-90ebf4d0f1e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBpdm9yeSUyMGxpdmluZyUyMHJvb20lMjBpbnRlcmlvcnxlbnwwfHx8fDE3Nzc5NzE4Nzl8MA&ixlib=rb-4.1.0&q=85" },
+  { cat: "Premium", title: "Halo Lounge", img: "https://customer-assets.emergentagent.com/job_design-spaces-luxury/artifacts/i28tcz3q_WhatsApp%20Image%202026-05-05%20at%204.36.52%20PM.jpeg" },
+  { cat: "Premium", title: "Diamond Study Wall", img: "https://customer-assets.emergentagent.com/job_design-spaces-luxury/artifacts/e7vcjfzj_WhatsApp%20Image%202026-05-05%20at%204.37.40%20PM.jpeg" },
+  { cat: "Premium", title: "Skyline TV Lounge", img: "https://customer-assets.emergentagent.com/job_design-spaces-luxury/artifacts/6fhk748c_WhatsApp%20Image%202026-05-05%20at%204.44.00%20PM000000.jpeg" },
+  { cat: "Mid-Range", title: "Triangular Accent Bedroom", img: "https://customer-assets.emergentagent.com/job_design-spaces-luxury/artifacts/qkpi61wh_WhatsApp%20Image%202026-05-05%20at%204.43.59%20PM.jpeg" },
+  { cat: "Mid-Range", title: "Beige Dining Suite", img: "https://customer-assets.emergentagent.com/job_design-spaces-luxury/artifacts/20p0c5zy_WhatsApp%20Image%202026-05-05%20at%204.44.00%20PM.jpeg" },
   { cat: "Mid-Range", title: "Ivory Modular Kitchen", img: "https://static.prod-images.emergentagent.com/jobs/94e983b5-8972-4845-8e05-3d289e91afc7/images/9c73c1fe2d41c5b650968aedf01153cee9da35d24603e5ce79e9a8a875b9fe39.png" },
-  { cat: "Premium", title: "Executive Workspace", img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBpbnRlcmlvcnxlbnwwfHx8fDE3Nzc5NzE4Nzl8MA&ixlib=rb-4.1.0&q=85" },
 ];
 
 const filters = ["All", "Budget", "Mid-Range", "Premium"];
