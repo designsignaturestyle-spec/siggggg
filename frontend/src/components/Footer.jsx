@@ -70,16 +70,6 @@ export default function Footer() {
                 <Instagram size={16} strokeWidth={1.5} />
               </a>
               <a
-                data-testid="footer-facebook"
-                href={SITE.socials.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 grid place-items-center border border-[#FAF6EC]/30 hover:border-[#D9BE85] hover:text-[#D9BE85] transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={16} strokeWidth={1.5} />
-              </a>
-              <a
                 data-testid="footer-whatsapp"
                 href={waLink()}
                 target="_blank"
