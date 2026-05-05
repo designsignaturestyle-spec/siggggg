@@ -14,6 +14,10 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { AuthProvider } from "./context/AuthContext";
 
 const Landing = () => {
   useEffect(() => {
@@ -41,21 +45,32 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Toaster
-          position="top-center"
-          toastOptions={{
-            style: {
-              background: "#FAF6EC",
-              color: "#2D2D2D",
-              border: "1px solid #C5A059",
-              borderRadius: 0,
-              fontFamily: "Outfit, sans-serif",
-            },
-          }}
-        />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-        </Routes>
+        <AuthProvider>
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              style: {
+                background: "#FAF6EC",
+                color: "#2D2D2D",
+                border: "1px solid #C5A059",
+                borderRadius: 0,
+                fontFamily: "Outfit, sans-serif",
+              },
+            }}
+          />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </div>
   );
